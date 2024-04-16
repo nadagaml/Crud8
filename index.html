@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- css links -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    .<nav class="navbar navbar-expand-md navbar-dark bg-primary ">
+        <a class="navbar-brand ms-3"> Crud System</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation"></button>
+
+    </nav>
+
+     
+<div class="head container m-auto p-5">
+    <h1 class="fw-bold">CURD</h1>
+    <p class="fw-bolder">Product Management system</p>
+</div>
+
+<div class="m-auto container">
+    <div class="form-inputs">
+        
+
+        <div class="input-gp mb-3">
+            <label>Product Name</label>
+            <input id="Pname" type="text" class="form-control mb-3" placeholder="Product Name">
+            <div id="name-alert" class="alert alert-danger d-none"> Name should be start with capital latter </div>
+        </div>
+
+        <div class="input-gp mb-3">
+            <div class="price">
+                <div class="row">
+                <input onkeyup="GetTotal()" type="number" id="Pprice" placeholder="price" class="form-control">
+                <input onkeyup="GetTotal()"  type="number" id="Ptaxes" placeholder="taxes" class="form-control">
+                <input onkeyup="GetTotal()"  type="number" id="Pads" placeholder="ads" class="form-control">
+                <input onkeyup="GetTotal()"  type="number" id="Pdiscount" placeholder="discount" class="form-control">
+                 
+                <small id="total"></small>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="input-gp mb-3">
+            <label>count</label>
+            <input id="Pcount"  class="form-control mb-3">
+        </div>
+
+        <div class="input-gp mb-3">
+            <label>category</label>
+            <input id="Pcategory"  class="form-control mb-3">
+        </div>
+
+        <button class="btn btn-primary" disabled  id="submit">create</button>
+
+    </div>
+</div>
+
+
+<div class="outputs container">
+    <div class="searchBlock my-5">
+
+        <!-- <input onkeyup="Search(this.value)" id="search" class="form-control mb-4" placeholder="Search"> -->
+        
+        <input onkeyup="searchData(this.value)" id="search" class="form-control mb-4" placeholder="search">
+
+        <div class="btnSearch m-auto">
+            <button onclick="getSearchMood(this.id)" class="btn btn-primary"  id="searchName">Search By Name</button>
+            <button onclick="getSearchMood(this.id)"  class="btn btn-primary"  id="searchCategory">Search By Category</button>
+        </div>
+    </div>
+
+    <div id="deleteAll">
+
+
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <th></th>    
+            <th>Name</th>
+            <th>Price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>count</th>
+            <th>Category</th>
+            <th></th>
+            <th></th>
+       
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+    </table>
+      
+
+</div>
+
+
+
+
+
+    
+    <!-- js links -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
